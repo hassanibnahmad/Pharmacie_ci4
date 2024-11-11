@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\UsersModel;
-
+use Config\Services;
 class Login extends Controller
 {
     public function index()
@@ -14,8 +14,9 @@ class Login extends Controller
 
     public function login()
     {
-        // Valide les données d'entrée
-        $validation = \Config\Services::validation();
+        helper(['form']);
+        // Validate input data
+        $validation = Services::validation();
         $email = $this->request->getPost('email');
         $pass = $this->request->getPost('password');
 
@@ -25,25 +26,36 @@ class Login extends Controller
         ]);
 
         if (!$this->validate($validation->getRules())) {
-            // Renvoie à la page de connexion avec des erreurs
+            // Return to login page with errors
             return view('login/login', [
-                'validation' => $this->validator // validator contient les erreurs de validation de la page précédente (login) est une fonction de la classe Controller, controller est une classe parente de Login 
+                'validation' => $this->validator
             ]);
         }
 
         $userModel = new UsersModel();
-        $hashedPassword = $userModel->where('email', $email)->First()['mot_de_passe'];
+        $hashedPassword = null;
+        
+        $user = $userModel->where('email', $email)->first();
+        if ($user) {
+            $hashedPassword = $user['mot_de_passe'];
+        } 
 
-        if (!password_verify($pass, $hashedPassword)) {
-            return redirect()->back()->with('error', 'Email ou mot de passe incorrect.');
-
+        if ((!password_verify($pass, $hashedPassword)) ) {
+            return redirect()->back()->with('error', 'Email ou mot de passe incorrect.'); 
         }
-        //password_verify() permet de vérifier si un mot de passe correspond à un hachage 
-        // First() permet de récupérer le premier enregistrement de la base de données
-        // Logique d'authentification (à implémenter)
-        // Par exemple, vérifier les informations d'identification dans la base de données
 
-        // Si authentifié, rediriger vers le tableau de bord
-        return redirect()->to('/home');
+        $data = [
+			'id' => $user['id'],
+			'nom' => $user['nom'],
+			'email' => $user['email'],
+            'role' => $user['role'],
+			'isLoggedIn' => true,
+		];
+
+        
+		session()->set($data);
+
+        // If authenticated, redirect to dashboard
+        return redirect()->to('/dashboard');
     }
 }
