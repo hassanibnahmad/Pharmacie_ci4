@@ -34,6 +34,8 @@ class Filters extends BaseFilters
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
+        // ajout du filtre d'authentification pour vérifier si l'utilisateur est connecté ou non
+        'login'          => \App\Filters\AuthFilter::class,
     ];
 
     /**
@@ -103,5 +105,7 @@ class Filters extends BaseFilters
      *
      * @var array<string, array<string, list<string>>>
      */
-    public array $filters = [];
+    public array $filters = [
+        'login' => ['before' => ['dashboard', 'medicaments', 'medicaments/*' ]],
+    ];
 }

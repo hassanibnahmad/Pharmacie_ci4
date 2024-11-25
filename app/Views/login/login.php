@@ -9,7 +9,7 @@
     <p class="text-red-500 font-bold"><?= session()->getFlashdata('error') ?></p>
 
         <?php if(isset($validation)): ?>
-            <div class="text-red-500 mb-4">
+            <div class="text-red-500 mb-4 font-bold">
                 <?= $validation->listErrors(); // listErrors() est une fonction de la classe Validation ?>
             </div>
         <?php endif; ?>
@@ -21,7 +21,9 @@
         <input type="password" id="password" name="password" class="w-full px-4 py-2 border border-gray-300 rounded mb-4 focus:outline-none focus:border-blue-500">
         
         <input type="submit" value="Login" class="cursor-pointer w-full bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">
+
     </form>
-    <p class="text-center">Ajouter Nouveau utilisateur <a href="/register" class="text-blue-500">Register here</a></p>
+    <p class="text-center mt-4">Mot de passe oublié? <a href="<?php echo base_url('/forgotPassword'); ?>" class="text-blue-500">Cliquez ici</a></p>
+    <p class="text-center">Vous n'avez pas un Compte? <a href="/register" class="text-blue-500">Register here</a></p>
 </div>
 <?php $this->endSection(); ?>

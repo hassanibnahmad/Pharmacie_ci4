@@ -1,0 +1,183 @@
+INFO - 2024-11-10 00:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 00:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 00:13:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 00:14:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 00:31:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 00:51:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 00:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 00:52:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 00:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 00:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 00:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 00:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 00:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:09:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-10 01:09:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Medicaments/medicaments.php"
+[Method: GET, Route: Medicaments/index]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Medicaments/medicaments.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Medicaments/medicaments', [], true)
+ 3 APPPATH\Controllers\Medicaments.php(11): view('Medicaments/medicaments')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Medicaments->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Medicaments))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Web_Denamique_TPs\\Projet_Pharmcie\\public\\index.php')
+INFO - 2024-11-10 01:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:11:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:11:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:14:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:15:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:15:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:16:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:16:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:17:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:17:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:17:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:21:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 01:22:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 13:40:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 13:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 13:41:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 13:41:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 14:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-10 14:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-10 14:30:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') NOT NULL,
+	`quantite` INT(11) NOT NULL,
+	`date` DATE NOT NULL,
+	`categorie`...' at line 4 in C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `m...', 0)
+#1 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `m...')
+#2 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `m...')
+#3 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `m...')
+#4 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\app\Database\Migrations\2024-11-10-142855_Medicaments.php(42): CodeIgniter\Database\Forge->createTable('medicaments')
+#5 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(867): App\Database\Migrations\Medicaments->up()
+#6 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-11-10 14:30:39 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') NOT NULL,
+	`quantite` INT(11) NOT NULL,
+	`date` DATE NOT NULL,
+	`categorie`...' at line 4 in C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `m...', 0)
+#1 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `m...')
+#2 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `m...')
+#3 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `m...')
+#4 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\app\Database\Migrations\2024-11-10-142855_Medicaments.php(42): CodeIgniter\Database\Forge->createTable('medicaments')
+#5 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(867): App\Database\Migrations\Medicaments->up()
+#6 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Commands\Database\MigrateRefresh.php(87): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#14 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
+ERROR - 2024-11-10 14:30:41 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') NOT NULL,
+	`quantite` INT(11) NOT NULL,
+	`date` DATE NOT NULL,
+	`categorie`...' at line 4 in C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `m...', 0)
+#1 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `m...')
+#2 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `m...')
+#3 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `m...')
+#4 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\app\Database\Migrations\2024-11-10-142855_Medicaments.php(42): CodeIgniter\Database\Forge->createTable('medicaments')
+#5 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(867): App\Database\Migrations\Medicaments->up()
+#6 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-11-10 14:32:04 --> mysqli_sql_exception: Unknown table 'pharmacie_db_ci.medicaments' in C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('DROP TABLE `med...', 0)
+#1 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DROP TABLE `med...')
+#2 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DROP TABLE `med...')
+#3 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\Forge.php(663): CodeIgniter\Database\BaseConnection->query('DROP TABLE `med...')
+#4 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\app\Database\Migrations\2024-11-10-012910_Medicaments.php(47): CodeIgniter\Database\Forge->dropTable('medicaments')
+#5 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(867): App\Database\Migrations\Medicaments->down()
+#6 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(290): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Commands\Database\MigrateRollback.php(101): CodeIgniter\Database\MigrationRunner->regress(2)
+#8 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-11-10 14:32:14 --> mysqli_sql_exception: Table 'test' already exists in C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `t...', 0)
+#1 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `t...')
+#2 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `t...')
+#3 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `t...')
+#4 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\app\Database\Migrations\2024-11-10-141235_TestTable.php(20): CodeIgniter\Database\Forge->createTable('test')
+#5 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(867): App\Database\Migrations\TestTable->up()
+#6 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Commands\Database\MigrateRefresh.php(87): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#14 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
+ERROR - 2024-11-10 14:52:54 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') NOT NULL,
+	`quantite` INT(11) NOT NULL,
+	`date` DATE NOT NULL,
+	`categorie`...' at line 4 in C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `m...', 0)
+#1 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `m...')
+#2 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `m...')
+#3 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `m...')
+#4 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\app\Database\Migrations\2024-11-10-145209_Medicament.php(42): CodeIgniter\Database\Forge->createTable('medicament')
+#5 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(867): App\Database\Migrations\Medicament->up()
+#6 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\vendor\codeigniter4\framework\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\Web_Denamique_TPs\Projet_Pharmcie\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}

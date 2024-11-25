@@ -36,7 +36,8 @@ class Users extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '50',
                 'null'       => true,
-            ]
+            ],
+            
         ]);
 
         $this->forge->addKey('id', true);

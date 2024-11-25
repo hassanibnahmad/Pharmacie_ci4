@@ -6,8 +6,12 @@ use App\Models\UsersModel;
 
 class Register extends Controller
 {
-    public function index(): string
+    public function index()
     {
+        if($this->isLogged()) {
+            return redirect()->to('/dashboard');
+        } 
+
         return view('login/register');
     }
 
@@ -31,9 +35,6 @@ class Register extends Controller
 
         if ($cle_enregistrement !== $cle_valide) {
             return redirect()->back()->with('error', 'Clé d\'enregistrement invalide.'); 
-            // La méthode with() permet de stocker un message flash dans la session, qui peut être récupéré dans la vue avec la méthode session()->getFlashdata('error') par exemple 
-            // La méthode back() permet de rediriger l'utilisateur vers la page précédente
-            // La méthode redirect() permet de rediriger l'utilisateur vers une autre page
         }
 
         // Insérer les données de l'utilisateur
@@ -47,5 +48,10 @@ class Register extends Controller
         // La méthode save() permet d'insérer des données dans la base de données save() est une fonction de la classe Model save() 
 
         return redirect()->to('/login')->with('success', 'Inscription réussie !');
+    }
+
+    public function isLogged() : bool
+    {
+        return session()->has('isLoggedIn'); // return true if the user is logged in else return false
     }
 }

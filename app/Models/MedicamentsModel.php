@@ -6,7 +6,8 @@ use CodeIgniter\Model;
 
 class MedicamentsModel extends Model
 {
-    Protected $table = 'medicaments';
+    Protected $table = 'medicament';
     Protected $primaryKey = 'id';
-    Protected $allowedFields = ['ref', 'prix', 'quantite', 'date', 'categorie', 'description'];    
+    Protected $allowedFields = ['ref', 'prix', 'quantite', 'date', 'categorie', 'description'];
+    
 }

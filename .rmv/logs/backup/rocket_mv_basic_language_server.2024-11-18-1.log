@@ -1,0 +1,4 @@
+2024-11-18 21:11:59.481 [pool-3-thread-1] INFO  com.rs.mv.mvvs.client.catalog.from.scan.CurrentPathScanner - [client:400205]scan file in current open file directory(C:/xampp/htdocs/Web_Denamique_TPs/Projet_Pharmcie/app/Database/Migrations)
+2024-11-18 21:33:22.122 [pool-3-thread-1] INFO  com.rs.mv.mvvs.client.catalog.from.scan.CurrentPathScanner - [client:400205]scan file in current open file directory(C:/xampp/htdocs/Web_Denamique_TPs/Projet_Pharmcie/app/Models)
+2024-11-18 21:48:29.614 [pool-3-thread-1] INFO  com.rs.mv.mvvs.client.catalog.from.scan.CurrentPathScanner - [client:400205]scan file in current open file directory(C:/xampp/htdocs/Web_Denamique_TPs/Projet_Pharmcie/app/Controllers)
+2024-11-18 21:59:51.008 [pool-3-thread-1] INFO  com.rs.mv.mvvs.client.catalog.from.scan.CurrentPathScanner - [client:400205]scan file in current open file directory(C:/xampp/htdocs/Web_Denamique_TPs/Projet_Pharmcie/app/Config)
