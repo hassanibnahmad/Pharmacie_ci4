@@ -4,18 +4,14 @@ use App\Models\UsersModel;
 use CodeIgniter\Controller; 
 use CodeIgniter\Email\Email;
 use CodeIgniter\Config\Services;
+
 class Login extends Controller
 {
-    public function index()
-    {  
-        if($this->isLogged()) {
-            return redirect()->to('/dashboard');
-        }
+    public function index(){  
         return view('login/login');
     }
 
-    public function login()
-    {
+    public function login(){
         helper(['form']);// Load form helper used for validation
         $validation = Services::validation();
         $email = $this->request->getPost('email');
@@ -67,84 +63,83 @@ class Login extends Controller
         return redirect()->to('/');
     }
 
-    
     public function forgotPassword()
-    {
-        $validation = \Config\Services::validation();
-        $email = $this->request->getPost('email');
-        $validation->setRules(['email' => 'required|valid_email']);
+{
+    $validation = \Config\Services::validation();
+
+    $validation->setRules([
+        'email' => 'required|valid_email',
         
-        if ($validation->withRequest($this->request)->run()) {
-            $userModel = new UsersModel();
-            $user = $userModel->where('email', $email)->first();
-            
-            if (!empty($user)) {
-                  // Mettre à jour la date de demande de réinitialisation du mot de passe ya3ni updated_at b current date and time
-                // $userModel->set('updated_at', date('Y-m-d H:i:s'));
-                // $userModel->where('id', $user['id']);
-                // $userModel->update();
-
-                $userModel->update($user['id'], ['updated_at' => date('Y-m-d H:i:s')]);
-                // chno hiya lraya dyal updated_at? bach n3arfo wach l'utilisateur 3ando demande de réinitialisation ou non 
-                // Envoyer l'email avec le lien de réinitialisation
-                // Envoyer l'email avec le lien de réinitialisation
-                $to = $email;
-                $subject = "Réinitialisation du mot de passe";
-                $message = "Bonjour ".$user['nom'].",<br><br>
-                            Cliquez sur le lien ci-dessous pour réinitialiser votre mot de passe:
-                            <a href='".base_url('login/resetPassword/'.$user['id'])."'>Réinitialiser le mot de passe</a><br><br>
-                            Merci.";
-                
-                $emailService = \Config\Services::email();
-                $emailService->setTo($to);
-                $emailService->setFrom('votre-email@example.com', 'Votre Nom');
-                $emailService->setSubject($subject);
-                $emailService->setMessage($message);
-                
-                if ($emailService->send()) {
-                    return redirect()->back()->with('success', 'Email envoyé avec succès.');
-                } else {
-                    return redirect()->back()->with('error', 'Erreur lors de l\'envoi de l\'email.');
-                }
-            } else {
-                return redirect()->back()->with('error', 'Email non trouvé dans la base de données.');
-            }
-        } else {
-            return view('login/forgotPassword', ['validation' => $this->validator]);
-        }
-    }
-    
-    // Fonction de réinitialisation du mot de passe
-  
-        public function resetPassword($userId) { 
-            return view('login/resetPassword', ['userId' => $userId]); 
-        } 
-        // Fonction pour traiter le formulaire de réinitialisation du mot de passe 
-        public function updatePassword() 
-        { 
-            $validation = \Config\Services::validation(); 
-            $newPassword = $this->request->getPost('new_password'); 
-            $confirmPassword = $this->request->getPost('confirm_password'); 
-            $userId = $this->request->getPost('user_id');
-             // Règles de validation 
-            $validation->setRules([ 
-                                    'new_password' => 'required|min_length[8]', 
-                                    'confirm_password' => 'required|matches[new_password]', 
-                                ]);
-             if ($validation->withRequest($this->request)->run()) { 
-                $userModel = new UsersModel();
-                 // Mettre à jour le mot de passe
-                 $userModel->update($userId, ['password' => password_hash($newPassword, PASSWORD_BCRYPT)]);
-                 return redirect()->to('/login')->with('success', 'Mot de passe mis à jour avec succès.');
-             } else { 
-                return view('login/resetPassword', [ 'validation' => $this->validator, 'userId' => $userId ]); 
-            } 
-
-        }
-
-
-    
-}
+    ]);
  
+        if (!$validation->withRequest($this->request)->run()) {
+            return view('login/forgotPassword', [
+                'validation' => $validation,
+            ]);
+        }
+    
+    $email = $this->request->getPost('email');
+    $userModel = new \App\Models\UsersModel();
+    $user = $userModel->where('email', $email)->first();
 
+    if ($user) {
+        $token = bin2hex(random_bytes(50)); // Génère un token aléatoire
+        $userModel->update($user['id'], [
+            'reset_token' => $token,
+            'token_expiration' => date('Y-m-d H:i:s', strtotime('+1 hour')) // Outputs: 2023-10-01 15:30:00 (if current time is 2023-10-01 14:30:00) +1h
+        ]);
 
+        $emailService = \Config\Services::email();
+        $emailService->setTo($user['email']);
+        $emailService->setSubject('Réinitialisation du mot de passe');
+        $emailService->setMessage("Cliquez sur ce lien pour réinitialiser votre mot de passe : ".base_url('login/resetPassword/'.$token));
+
+        if ($emailService->send()) {
+            return redirect()->back()->with('success', 'Un email de réinitialisation du mot de passe a été envoyé, veuillez vérifier votre boîte de réception.');
+        } else {
+            return redirect()->back()->with('error', 'Une erreur est survenue lors de l\'envoi de l\'email.');
+        }
+    } else {
+        return redirect()->back()->with('error', 'Aucun utilisateur trouvé avec cet email.');
+    }
+}
+
+public function resetPassword($token)
+{
+    $validation = \Config\Services::validation();
+
+    $validation->setRules([
+        'new_password' => 'required|min_length[6]',
+        'confirm_password' => 'required|matches[new_password]'
+    ]);
+
+    if (!$validation->withRequest($this->request)->run()) {
+        return view('login/resetPassword', [
+            'token' => $token,
+            'validation' => $validation,
+        ]);
+    }
+
+    $userModel = new \App\Models\UsersModel();
+    $user = $userModel->where('reset_token', $token)->first();
+
+    if ($user && strtotime($user['token_expiration']) > time()) { 
+        // time() returns the current time in seconds since the Unix Epoch
+        $newPassword = password_hash($this->request->getPost('new_password'), PASSWORD_DEFAULT);
+        $userModel->update($user['id'], [
+            'mot_de_passe' => $newPassword,
+            'reset_token' => null,
+            'token_expiration' => null
+        ]);
+
+        return redirect()->to('login')->with('success', 'Mot de passe changé avec succès.');
+    } else {
+        return redirect()->to('login')->with('error', 'Token invalide ou expiré.');
+    }
+}
+//la fonction resetPassword() vérifie si le token est valide et n'a pas expiré. 
+// Si c'est le cas, elle met à jour le mot de passe de l'utilisateur avec le nouveau mot de passe
+//  et supprime le token et l'expiration du token de la base de données. Sinon, elle renvoie un message d'erreur.
+
+}
+?>

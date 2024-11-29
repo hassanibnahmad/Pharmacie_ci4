@@ -36,6 +36,7 @@ class Filters extends BaseFilters
         'performance'   => PerformanceMetrics::class,
         // ajout du filtre d'authentification pour vérifier si l'utilisateur est connecté ou non
         'login'          => \App\Filters\AuthFilter::class,
+        'afterLogin'          => \App\Filters\AfterAuthFilter::class,
     ];
 
     /**
@@ -106,6 +107,7 @@ class Filters extends BaseFilters
      * @var array<string, array<string, list<string>>>
      */
     public array $filters = [
-        'login' => ['before' => ['dashboard', 'medicaments', 'medicaments/*' ]],
+        'login' => ['before' => ['dashboard', 'medicaments', 'medicaments/*']], // les routes qui nécessitent une authentification
+        'afterLogin' => ['before' => ['/', 'login', 'register', 'forgotPassword', 'resetPassword']], // les routes qui nécessitent qui sont impossible de lui acceder after you logged in
     ];
 }
