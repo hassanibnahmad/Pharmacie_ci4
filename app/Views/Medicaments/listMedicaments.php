@@ -23,7 +23,7 @@
         if (successModal) {
             setTimeout(() => {
                 successModal.style.display = 'none';
-            }, 2500);
+            }, 1000);
         }
     });//DOMContentLoaded  est l'evenement qui se produit lorsque le document HTML a été complètement chargé et analysé, sans attendre les feuilles de style, les images et les sous-trames pour terminer le chargement.
 </script>  
@@ -42,7 +42,7 @@
     </div>
 </div>
 
-<a href="<?= base_url('Medicaments/create_med') ?>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">Ajouter Medicament</a>
+    <a href="<?= base_url('Medicaments/create_med') ?>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4"><i class="fa-solid fa-add"></i> Ajouter Medicament</a>
     <table class="w-full border-collapse bg-white shadow rounded mt-4 text-center">
             <thead>
                 <tr class="bg-gray-100">                    

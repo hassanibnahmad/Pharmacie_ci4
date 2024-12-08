@@ -12,7 +12,7 @@
     <?php endif; ?>
 
     <form action="<?= base_url('login/resetPassword/'.$token) ?>" method="post">
-        <input type="" name="user_id" value="<?= $token ?>" class="w-full px-4 py-2 border border-gray-300 rounded mb-4 focus:outline-none focus:border-blue-500">
+        <input type="hidden" name="user_id" value="<?= $token ?>" class="w-full px-4 py-2 border border-gray-300 rounded mb-4 focus:outline-none focus:border-blue-500">
         <div>
             <label>Nouveau mot de passe</label>
             <input type="password" name="new_password" required class="w-full px-4 py-2 border border-gray-300 rounded mb-4 focus:outline-none focus:border-blue-500">

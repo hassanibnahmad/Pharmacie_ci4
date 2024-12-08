@@ -4,6 +4,7 @@ namespace Config;
 
 use CodeIgniter\Config\AutoloadConfig;
 
+
 /**
  * -------------------------------------------------------------------
  * AUTOLOADER CONFIGURATION
@@ -41,6 +42,8 @@ class Autoload extends AutoloadConfig
      */
     public $psr4 = [
         APP_NAMESPACE => APPPATH,
+        // 'Dompdf' => APPPATH . 'ThirdParty/dompdf/src', // third party library 
+        // 'Dompdf' => APPPATH . 'ThirdParty/dompdflib/src', 
     ];
 
     /**
@@ -90,5 +93,5 @@ class Autoload extends AutoloadConfig
      *
      * @var list<string>
      */
-public $helpers = ['url', 'form', 'session']; // Ensure 'session' helper is loaded
+public $helpers = ['url', 'form', 'session'];
 }

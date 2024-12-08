@@ -47,7 +47,8 @@ class Medicaments extends Controller
         $medicament = new MedicamentsModel();
         // get all medicaments and send them using session to the view
         $data = [
-            'medicaments' => $medicament->findAll()
+            // recuperer tous les medicaments en ordre decroissant selon l'id 
+            'medicaments' => $medicament->orderBy('id', 'DESC')->findAll()
         ];
         return view('Medicaments/listMedicaments', $data);
     }
@@ -111,6 +112,13 @@ class Medicaments extends Controller
         return redirect()->to('/Medicaments/list_med');
     }
 
-  
-    
+    // medicament en rupture
+    public function rupture(){
+        $medicament = new MedicamentsModel();
+        $rupture = $medicament->where('quantite', 0)->findAll();
+        $data = [
+            'rupture' => $rupture
+        ];
+        return view('Medicaments/ruptureMedicament', $data);
+    }
 }
