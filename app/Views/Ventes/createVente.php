@@ -47,14 +47,15 @@
         </div>
         <!-- prix -->
         <div class="mb-4">
-            <input type="text" name="prix" id="prix" 
+        <label for="prix" class="block text-gray-700 text-sm font-bold mb-2">Prix:</label>
+            <input type="text" name="prix" id="prix" disabled
                     class=" border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
         </div>
 
         <!-- montatnt total -->
         <div class="mb-4">
             <label for="montant_total" class="block text-gray-700 text-sm font-bold mb-2">Montant Total:</label>
-            <input type="number" name="montant_total" id="montant_total"  
+            <input type="number" name="montant_total" id="montant_total"  disabled
                     class=" border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     min="1" >
         </div>

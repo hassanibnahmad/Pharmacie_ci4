@@ -10,7 +10,7 @@
                 <div class="text-red-500 font-bold">
                     <?= $validation->getError('email') ?>
                 </div>
-                <div>
+                <div class="text-red-500 font-bold">
                     <?= session()->getFlashdata('error') ?>
                 </div>
             <?php endif; ?>

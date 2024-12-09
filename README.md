@@ -1,68 +1,85 @@
-# CodeIgniter 4 Application Starter
+<!-- un fichier README.md pour présenter le projet gestion de pharmacie -->
 
-## What is CodeIgniter?
+# Gestion de pharmacie
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## Description
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+Ce projet est une application de gestion de pharmacie qui permet de gérer les médicaments et les ventes des médicaments, il permet aussi de générer les recus des ventes.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## Fonctionnalités
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+- Ajouter un médicament
+- Modifier un médicament
+- Supprimer un médicament
+- Afficher la liste des médicaments
+- Ajouter une vente
+- Afficher la liste des ventes
+- Générer un reçu PDF
 
-## Installation & updates
+## Technologies utilisées
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+- codeigniter4
+- tailwindcss
+- mysql
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+## Installation
 
-## Setup
+1. Cloner le projet
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+```bash
+git clone
+```
 
-## Important Change with index.php
+2. Installer les dépendances
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+```bash
+composer install
+```
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+3. Créer une base de données
+4. Configurer le fichier .env
+5. Exécuter les migrations
 
-**Please** read the user guide for a better explanation of how CI4 works!
+```bash
+php spark migrate
+```
 
-## Repository Management
+6. Exécuter le serveur
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+```bash
+php spark serve
+```
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+7. Accéder à l'application
 
-## Server Requirements
+```
+http://localhost:8080
+```
 
-PHP version 8.1 or higher is required, with the following extensions installed:
+## erreurs
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+tout les opreations de l'application sont sécurisées par des vérifications, si vous avez une erreur c'est surement parce que vous avez entré des données incorrectes ou vous avez essayé de faire une opération non autorisée.
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
+## Comptes d'accès
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+- Clé d'enregistrement: `ABCD1234`
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+## Captures d'écran
+
+- Page d'accueil
+  ![Page d'accueil](screenshots/dashboard.png)
+- Liste des médicaments
+  ![Liste des médicaments](screenshots/list_med.png)
+- Ajouter un médicament
+  ![Ajouter un médicament](screenshots/ajouterMed.png)
+- Liste des ventes
+  ![Liste des ventes](screenshots/listVent1.png)
+- Ajouter une vente
+  ![Ajouter une vente](screenshots/addVent.png)
+- Générer un reçu PDF
+  ![Générer un reçu PDF](screenshots/recu_pdf.png)
+
+## Auteur
+
+- [Hassan IBNAHMAD], étudiant en 3ème année du licence d'excellence en ingénierie logicielle à faculté des sciences de Agadir.
+- [Mohamed OURKIYA], étudiant en 3ème année du licence d'excellence en ingénierie logicielle à faculté des sciences de Agadir.

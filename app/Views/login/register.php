@@ -9,7 +9,7 @@
     <p class="text-red-500 font-bold"><?= session()->getFlashdata('error') ?></p>
 
     <?php if(isset($validation)): ?>
-            <div class="text-red-500 mb-4">
+            <div class="text-red-500 mb-4 text-bold">
 
                 <?= $validation->listErrors(); // listErrors() est une fonction de la classe Validation ?>
             </div>
